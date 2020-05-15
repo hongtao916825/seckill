@@ -22,10 +22,12 @@
     </properties>
 
     <modules>
+        <module>config</module>
         <module>order</module>
         <module>feign-api</module>
         <module>product</module>
         <module>pay</module>
+        <module>gateway</module>
     </modules>
 
     <dependencies>
@@ -37,7 +39,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-
+        <!--<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>-->
     </dependencies>
 
     <dependencyManagement>

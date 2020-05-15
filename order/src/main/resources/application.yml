@@ -1,6 +1,4 @@
-
 spring:
-
   application:
     name: order-center
   cloud:
@@ -9,3 +7,4 @@ spring:
         server-addr: 47.97.215.217:8848
 server:
   port: 8081
+
