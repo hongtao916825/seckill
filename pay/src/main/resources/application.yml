@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: pay-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.215.217:8848
+
+

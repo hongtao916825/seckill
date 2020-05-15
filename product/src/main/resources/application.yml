@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: product-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.215.217:8848
+
