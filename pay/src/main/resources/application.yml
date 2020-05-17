@@ -5,5 +5,7 @@ spring:
     nacos:
       discovery:
         server-addr: 47.97.215.217:8848
-
-
+        register-enabled: true
+feign:
+  hystrix:
+    enabled: true
