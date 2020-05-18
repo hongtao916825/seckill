@@ -14,7 +14,7 @@ public class OrderController {
     @PostMapping("/getOrder/{orderId}")
     @HystrixCommand(fallbackMethod = "getOrderFallback")
     public String getOrder(@PathVariable("orderId") String orderId){
-        return "orderId:" + orderId;
+        return "orderId2:" + orderId;
     }
 
     @GetMapping("/order/testNacosYml")
