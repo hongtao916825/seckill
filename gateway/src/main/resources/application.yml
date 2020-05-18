@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+          predicates:
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+          filters:
+    nacos:
+      discovery:
+        ip: 47.97.215.217
+        port: 8848
