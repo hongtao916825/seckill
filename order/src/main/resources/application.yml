@@ -8,4 +8,6 @@ spring:
         register-enabled: true
 server:
   port: 8085
+  servlet:
+    context-path: /order-center
 
