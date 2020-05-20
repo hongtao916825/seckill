@@ -7,3 +7,7 @@ spring:
         server-addr: 47.97.215.217:8848
 logging:
   config: classpath:logback-spring.xml
+server:
+  port: 8085
+  servlet:
+    context-path: /product-center
