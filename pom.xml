@@ -28,6 +28,7 @@
         <module>product</module>
         <module>pay</module>
         <module>gateway</module>
+        <module>quartz</module>
     </modules>
 
     <dependencies>
