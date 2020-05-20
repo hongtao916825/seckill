@@ -2,6 +2,7 @@ package com.seckill.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.ribbon.proxy.annotation.Hystrix;
+import com.seckill.ordercenter.OrderCenter2Api;
 import com.seckill.ordercenter.OrderCenterApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PayInfoController {
 
     @Autowired
-    private OrderCenterApi orderCenterApi;
+    private OrderCenter2Api orderCenterApi;
 
     /**
      * @return

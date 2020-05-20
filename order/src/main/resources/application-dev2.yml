@@ -1,13 +1,12 @@
 spring:
   application:
-    name: order-center
+    name: order-center2
   cloud:
     nacos:
       discovery:
         server-addr: 47.97.215.217:8848
         register-enabled: true
 server:
-  port: 8085
-  servlet:
-    context-path: /order-center
-
+  port: 8082
+test:
+  name: 1234
