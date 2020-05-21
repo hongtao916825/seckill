@@ -19,6 +19,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <common.version>1.0-SNAPSHOT</common.version>
     </properties>
 
     <modules>
@@ -36,6 +37,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.seckill</groupId>
+            <artifactId>common</artifactId>
+            <version>${common.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
