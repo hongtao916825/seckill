@@ -29,6 +29,7 @@
         <module>pay</module>
         <module>gateway</module>
         <module>quartz</module>
+        <module>common</module>
     </modules>
 
     <dependencies>
