@@ -2,6 +2,7 @@ package com.seckill.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +28,7 @@ public class OrderController {
         return "";
     }
 
-    @GetMapping("testHystrix")
+    @GetMapping("testHystrix/{orderId}")
     @ResponseBody
     @HystrixCommand(commandKey = "testCommand", groupKey = "testGroup", threadPoolKey = "testThreadKey",
             fallbackMethod = "hiConsumerFallBack", ignoreExceptions = {NullPointerException.class},
@@ -40,11 +41,11 @@ public class OrderController {
                     @HystrixProperty(name = "metrics.rollingStats.timeInMilliseconds", value = "1440")
             }
     )
-    public String testHystrix(){
-        return "";
+    public String testHystrix(@PathVariable("orderId") String orderId){
+        return orderId;
     }
 
     public String hiConsumerFallBack(String orderId, Throwable e){
-        return "";
+        return "33334：" + orderId + e.getMessage();
     }
 }
