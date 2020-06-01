@@ -9,5 +9,5 @@ logging:
   config: classpath:logback-spring.xml
 server:
   port: 8085
-  servlet:
-    context-path: /product-center
+#  servlet:
+#    context-path: /product-center

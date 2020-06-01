@@ -19,5 +19,5 @@ order-center2:
     #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule #配置规则 响应时间权重
 server:
   port: 8083
-  servlet:
-    context-path: /pay-center
+#  servlet:
+#    context-path: /pay-center

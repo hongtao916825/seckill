@@ -13,7 +13,7 @@ public class OrderController {
     private String testName;
 
     @PostMapping("/getOrder/{orderId}")
-    @HystrixCommand(fallbackMethod = "getOrderFallback")
+//    @HystrixCommand(fallbackMethod = "getOrderFallback")
     public String getOrder(@PathVariable("orderId") String orderId){
         return "orderId2:" + orderId;
     }

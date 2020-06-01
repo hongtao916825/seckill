@@ -39,13 +39,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.seckill</groupId>
-            <artifactId>common</artifactId>
-            <version>${common.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <!--<dependency>
             <groupId>com.alibaba</groupId>

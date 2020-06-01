@@ -8,7 +8,7 @@ spring:
         register-enabled: true
 server:
   port: 8082
-  servlet:
-    context-path: /order-center
+#  servlet:
+#    context-path: /order-center
 test:
   name: 1234
