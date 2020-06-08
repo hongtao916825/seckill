@@ -11,9 +11,11 @@ spring:
           uri: lb://order-center
           predicates:
             - After=2017-01-20T17:42:47.789-07:00[America/Denver]
-            - Path=/order-center/**
+            - Path=/order/**
           filters:
             - AddResponseHeader=X-Response-Foo,Bar
+            - PreserveHostHeader
+            - TokenValidate
       discovery:
         locator:
           enabled: true

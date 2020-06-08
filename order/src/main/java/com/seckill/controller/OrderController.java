@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/order")
 public class OrderController {
 
     @Value("${test.name}")
@@ -18,7 +19,7 @@ public class OrderController {
         return "orderId2:" + orderId;
     }
 
-    @GetMapping("/order/testNacosYml")
+    @GetMapping("/testNacosYml")
     @ResponseBody
     public String testNacosYml(){
         return testName;
@@ -28,7 +29,7 @@ public class OrderController {
         return "";
     }
 
-    @GetMapping("testHystrix/{orderId}")
+    @GetMapping("/testHystrix/{orderId}")
     @ResponseBody
     @HystrixCommand(commandKey = "testCommand", groupKey = "testGroup", threadPoolKey = "testThreadKey",
             fallbackMethod = "hiConsumerFallBack", ignoreExceptions = {NullPointerException.class},
