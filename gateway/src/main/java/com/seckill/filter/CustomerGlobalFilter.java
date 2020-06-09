@@ -1,4 +1,4 @@
-package com.seckill.gateway.filter;
+package com.seckill.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -14,7 +14,7 @@ public class CustomerGlobalFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        return chain.filter(exchange);
+        return exchange.getResponse().setComplete();
     }
 
 }

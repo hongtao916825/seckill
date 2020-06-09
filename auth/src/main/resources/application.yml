@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: auth-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.215.217:8848
+        register-enabled: true
+        namespace: ab65f2cd-3b3e-4489-b07b-df4618217576
+        group: dev-test
+server:
+  port: 8088
+  servlet:
+    context-path: /

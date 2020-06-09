@@ -1,4 +1,4 @@
-package com.seckill.gateway.filter;
+package com.seckill.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;

@@ -1,10 +1,10 @@
-package com.seckill.gateway;
+package com.seckill.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayApplicationTests {
+class AuthApplicationTests {
 
     @Test
     void contextLoads() {

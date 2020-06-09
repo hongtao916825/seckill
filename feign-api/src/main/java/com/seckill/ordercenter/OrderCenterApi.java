@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "order-center")
 public interface OrderCenterApi {
 
-    @PostMapping("/getOrder/{orderId}")
+    @PostMapping("/order/getOrder/{orderId}")
     String getOrder(@PathVariable("orderId") String orderId);
 
 }
