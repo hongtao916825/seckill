@@ -45,9 +45,10 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
+        <!--SpringSecurity的依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-security</artifactId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
     </dependencies>
 

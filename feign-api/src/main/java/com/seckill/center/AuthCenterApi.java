@@ -1,4 +1,4 @@
-package com.seckill.auth.center;
+package com.seckill.center;
 
 import org.springframework.cloud.openfeign.FeignClient;
 

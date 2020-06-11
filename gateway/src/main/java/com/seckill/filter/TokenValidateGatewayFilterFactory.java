@@ -18,7 +18,6 @@ public class TokenValidateGatewayFilterFactory extends AbstractGatewayFilterFact
             @Override
             public Mono<Void> filter(ServerWebExchange exchange,
                                      GatewayFilterChain chain) {
-                // todo 判断是否有用户登陆，没有的话去登陆鉴权
                 return chain.filter(exchange);
             }
 

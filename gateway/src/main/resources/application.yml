@@ -29,3 +29,8 @@ feign:
     config:
       default:
         readTimeout: 5000
+skip:
+  url:
+    nonAuthUrls:
+      - /outh/**
+      - /login
