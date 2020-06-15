@@ -1,0 +1,31 @@
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: hikari
+  application:
+    name: member-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.215.217:8848
+logging:
+  config: classpath:logback-spring.xml
+server:
+  port: 8089
+# MyBatis-plus配置
+mybatis-plus:
+  # 搜索指定包别名
+  typeAliasesPackage: com.ruoyi.project.**.domain, com.ruoyi.pay.**.domain
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mybatis/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_null
+#  servlet:
+#    context-path: /product-center
