@@ -8,7 +8,7 @@ spring:
       enabled: true
       routes:
         - id: order-center-route
-          uri: lb://order-center
+          uri: lb://order-centers
           predicates:
             - After=2017-01-20T17:42:47.789-07:00[America/Denver]
 #            - Path=/order-center/**
@@ -16,9 +16,12 @@ spring:
             - Path=/getOrder/**
           filters:
             - AddResponseHeader=X-Response-Foo,Bar
+            - PreserveHostHeader
+            - TokenValidate
       discovery:
         locator:
           enabled: true
+      default-filters:
     nacos:
       discovery:
         server-addr: 47.97.215.217:8848

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-center
+    name: auth-center
   cloud:
     nacos:
       discovery:
@@ -9,8 +9,12 @@ spring:
         namespace: ab65f2cd-3b3e-4489-b07b-df4618217576
         group: dev-test
 server:
-  port: 8081
+  port: 8088
   servlet:
     context-path: /
-test:
-  name: 1234
+seckill:
+  jwt:
+    keyPairName: jwt.jks
+    keyPairAlias: jwt
+    keyPairSecret: 123456
+    keyPairStoreSecret: 123456

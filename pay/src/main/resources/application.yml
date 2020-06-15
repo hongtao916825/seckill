@@ -6,12 +6,19 @@ spring:
       discovery:
         server-addr: 47.97.215.217:8848
         register-enabled: true
+        namespace: ab65f2cd-3b3e-4489-b07b-df4618217576
+        group: dev-test
 feign:
-  hystrix:
-    enabled: true
-order-center2:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+#  hystrix:
+#    enabled: true
+  client:
+    config:
+      default:
+        readTimeout: 5000
+
+#order-center2:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
     #                                 com.netflix.loadbalancer.BestAvailableRule  #配置规则 最空闲连接策略
     #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
     #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #配置规则 轮询
