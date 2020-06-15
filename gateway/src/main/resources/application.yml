@@ -8,16 +8,17 @@ spring:
       enabled: true
       routes:
         - id: order-center-route
-          uri: lb://order-centers
+          uri: lb://order-center
           predicates:
             - After=2017-01-20T17:42:47.789-07:00[America/Denver]
-            - Path=/order-center/**
+#            - Path=/order-center/**
+            ## 会将requestPath后面的部分按照原样按照order-center进行转发
+            - Path=/getOrder/**
           filters:
             - AddResponseHeader=X-Response-Foo,Bar
-               discovery:
+      discovery:
         locator:
           enabled: true
-      default-filters:
     nacos:
       discovery:
         server-addr: 47.97.215.217:8848
