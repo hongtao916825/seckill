@@ -12,3 +12,9 @@ server:
   port: 8088
   servlet:
     context-path: /
+seckill:
+  jwt:
+    keyPairName: jwt.jks
+    keyPairAlias: jwt
+    keyPairSecret: 123456
+    keyPairStoreSecret: 123456

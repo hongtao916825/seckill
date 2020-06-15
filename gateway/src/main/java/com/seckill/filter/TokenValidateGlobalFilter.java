@@ -4,6 +4,7 @@ import com.seckill.config.NonAuthUrls;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.PathMatcher;
@@ -17,6 +18,7 @@ import seckill.common.exception.GateWayException;
  * 全局过滤器
  */
 @Component
+@Order(1)
 public class TokenValidateGlobalFilter implements GlobalFilter {
 
     @Autowired
@@ -32,7 +34,9 @@ public class TokenValidateGlobalFilter implements GlobalFilter {
            throw new GateWayException(ResultCode.AUTHORIZATION_HEADER_IS_EMPTY);
         }
         // todo 判断是否有用户登陆，没有的话去登陆鉴权
-        return exchange.getResponse().setComplete();
+
+//        return exchange.getResponse().setComplete();
+        return chain.filter(exchange);
     }
 
     private boolean shouldSkip(String currentUrl) {

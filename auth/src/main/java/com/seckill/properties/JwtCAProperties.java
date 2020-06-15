@@ -11,7 +11,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 * @version: 1.0
 */
 @Data
-@ConfigurationProperties(prefix = "tuling.jwt")
+@ConfigurationProperties(prefix = "seckill.jwt")
 public class JwtCAProperties {
 
     /**

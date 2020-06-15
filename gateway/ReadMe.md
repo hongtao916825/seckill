@@ -49,3 +49,4 @@ spring.cloud.nacos.discovery.port=8848
                 StripPrefixGatewayFilterFactory：这个与PrefixPathGatewayFilterFactory类似，只不过是按照配置截掉Uri的部分path。
       GlobalFilter : 全局过滤器，不需要在配置文件中配置，作用在所有的路由上，最终通过GatewayFilterAdapter包装成GatewayFilterChain可识别的过滤器，它为请求业务以及路由的URI转换为真实业务服务的请求地址的核心过滤器，不需要配置，系统初始化时加载，并作用在每个路由上。
       
+return exchange.getResponse().setComplete();过滤器就不会再往下在，可以在这里验证登陆不成功后，在response加入标记，直接返回前端，前端跳转到登陆
