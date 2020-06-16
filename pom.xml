@@ -34,7 +34,7 @@
         <module>common</module>
         <module>auth</module>
         <module>member</module>
-        <module>mgb</module>
+        <module>member-api</module>
     </modules>
 
     <dependencies>
